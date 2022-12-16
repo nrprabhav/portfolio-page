@@ -210,12 +210,16 @@ nav li a{
     flex-direction: column;
   }
   .page-section h2{
-    width: 70%;
+    width: 100%;
     border-right: none;
     border-bottom: solid 2px;
     text-align: center;
   }
+  .page-section p{
+    width: 100%;
+  }
   #contact ul{
+    width: 100%;
     display: list-item;
     text-align: center;
   }
@@ -223,7 +227,7 @@ nav li a{
     margin: 10px;
   }
   #work figure{
-    width: 75%;
+    width: 100%;
     display: grid;
     padding: 0px 20px 0px 20px;
     height: 100vh;

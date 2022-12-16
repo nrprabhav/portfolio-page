@@ -1,0 +1,240 @@
+body{
+  background-color: white;
+}
+
+/*Styling the header*/
+
+header{
+  background-color: rgb(110, 92, 92);
+  display: flex;
+  height: auto;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header h1{
+  margin: 20px;
+  padding: 20px;
+  font-size: xx-large;
+  background-color: bisque;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 20px;
+}
+
+nav li{
+  display: inline;
+  margin: 20px;
+  padding: 10px;
+  font-size: larger;
+  text-emphasis: none;
+}
+
+nav li a{
+  text-decoration: none;
+  color: azure;
+}
+
+/*Styling the banner*/
+.hero-banner{
+  
+  width: 100vw;
+  height: 20vh;
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+  display: flex;
+
+  align-items: flex-end;
+  justify-content:right;
+}
+
+.hero-banner h2{
+  background-color: aliceblue;
+  color: blue;
+  font-size: x-large;
+  margin: 20px;
+}
+
+/*Styling Main Content*/
+.page-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+
+/*Styling About Me*/
+.page-section h2{
+  width: 20%;
+  font-size: xx-large;
+  color: rgb(78, 99, 155);
+  border-right: solid 2px;
+  text-align: right;
+  padding: 20px;
+}
+
+.page-section p{
+  width: 75%;
+  padding: 20px;
+  line-height: 1.3;
+}
+
+/*Styling Work*/
+
+#work figure{
+  width: 75%;
+  display: grid;
+  padding: 0px 20px 0px 20px;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-areas: 
+    "refactor refactor"
+    "CSS CSS"
+    "Pro-3 Pro-4";
+}
+
+#work figure a{
+  display: flex;
+  border: 4px lightblue solid;
+  border-radius: 2px;
+  align-items: flex-end;
+  color: blue;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#work figure a:hover{
+  box-shadow: inset 0px 0px 8px
+  lightblue,
+  0 0 15px
+  lightblue;
+  }
+
+#refactoring-html{
+  grid-area: refactor;
+  background-image: url("../images/02-portfolio-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+#css-code-snippet{
+  grid-area: CSS;
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+#project-3{
+  grid-area: Pro-3;
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+#project-4{
+  grid-area: Pro-4;
+  background-image: url("../images/02-portfolio-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.project-titles{
+  display: block;
+  width: fit-content;
+  background-color: aliceblue;
+  margin: 20px;
+  font-size: x-large;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.project-subtitles{
+  font-size: medium;
+}
+
+/*Contact*/
+#contact ul{
+  display: flex;
+  width: 75%;
+  padding: 20px;
+  list-style: none;
+  justify-content: space-between;
+  font-size: larger;
+}
+
+#contact ul li a{
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 870px){
+  .page-section h2{
+    padding: 20px 20px 20px 0px;
+  }
+}
+
+@media screen and (max-width: 800px){
+  nav li{
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .page-section h2{
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 635px){
+  nav li{
+    display: list-item;
+    padding: 5px;
+  }
+  .page-section{
+    flex-direction: column;
+  }
+  .page-section h2{
+    width: 70%;
+    border-right: none;
+    border-bottom: solid 2px;
+    text-align: center;
+  }
+  #contact ul{
+    display: list-item;
+    text-align: center;
+  }
+  #contact ul li{
+    margin: 10px;
+  }
+  #work figure{
+    width: 75%;
+    display: grid;
+    padding: 0px 20px 0px 20px;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr;
+    grid-template-areas: 
+      "refactor" "refactor"
+      "CSS"
+      "Pro-3" "Pro-4";
+  }
+  #projects-top a{
+    margin: 10px;
+  }
+}
